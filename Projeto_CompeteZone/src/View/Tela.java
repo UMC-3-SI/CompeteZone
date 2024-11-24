@@ -32,11 +32,11 @@ public class Tela extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -52,7 +52,7 @@ public class Tela extends javax.swing.JFrame {
 
         jMenu1.setLabel("Cadastrar");
 
-        jMenuItem1.setText("Cadastro de jogadores");
+        jMenuItem1.setText("Cadastro de Jogadores");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -60,19 +60,19 @@ public class Tela extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem5.setText("Cadastro de jogos");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem2.setText("Cadastro de jogos");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setLabel("Alterar");
 
-        jMenuItem3.setText("Alterar jogadores");
+        jMenuItem3.setText("Alterar Jogadores");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -83,25 +83,20 @@ public class Tela extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Consultar");
-        jMenu3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu3ActionPerformed(evt);
-            }
-        });
 
-        jMenuItem2.setText("Consultar jogadores");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem5.setText("Consultar Jogadores");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem5ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        jMenu3.add(jMenuItem5);
 
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Excluir");
 
-        jMenuItem4.setText("Excluir jogadores");
+        jMenuItem4.setText("Excluir Jogadores");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -151,18 +146,19 @@ public class Tela extends javax.swing.JFrame {
         t.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jMenu3ActionPerformed
-
+    }   
+    
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        TelaConsultarJogadores t = new TelaConsultarJogadores();
+        TelaCadastroJogos t = new TelaCadastroJogos();
         t.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
         TelaAlterarJogadores t = new TelaAlterarJogadores();
         t.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
@@ -175,8 +171,6 @@ public class Tela extends javax.swing.JFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        TelaCadastroJogos t = new TelaCadastroJogos();
-        t.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
