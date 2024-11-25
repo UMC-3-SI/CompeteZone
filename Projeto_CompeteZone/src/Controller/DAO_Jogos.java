@@ -46,10 +46,10 @@ public class DAO_Jogos {
         try {
             conexao = new Conexao().getConnection();
             st = conexao.prepareStatement(sql);
-            st.setInt(1, jgs.getIdJogo());
-            st.setString(2, jgs.getNome());
-            st.setString(3, jgs.getCategoria());
-            st.setFloat(4, jgs.getNumPlayers());
+            st.setString(1, jgs.getNome());
+            st.setString(2, jgs.getCategoria());
+            st.setFloat(3, jgs.getNumPlayers());
+            st.setInt(4, jgs.getIdJogo());
             st.executeUpdate();
         } catch(ClassNotFoundException|SQLException ex){
             System.out.println("Erro: "+ex.getMessage());
