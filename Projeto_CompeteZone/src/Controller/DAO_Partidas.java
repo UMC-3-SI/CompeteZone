@@ -32,9 +32,8 @@ public class DAO_Partidas {
         st.setInt(1, ptd.getIdPtd());
         ResultSet rs = st.executeQuery();
         while (rs.next()) {
-            ptd.setIdPtd(rs.getInt(2));
-            ptd.setIdJogo(rs.getInt(3));
-            ptd.setIdEqp(rs.getInt(4));
+            ptd.setIdJogo(rs.getInt(2));
+            ptd.setIdEqp(rs.getInt(3));
         }
     }
     
@@ -55,7 +54,7 @@ public class DAO_Partidas {
     }
     
     public void Excluir(Partidas ptd) throws SQLException,ClassNotFoundException{
-        String sql = "delete from partidas where id=?";
+        String sql = "delete from partidas where idPtd=?";
         PreparedStatement st = null;
         Connection con = null;
         con = new Conexao().getConnection();

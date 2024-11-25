@@ -19,7 +19,7 @@ public class DAO_Equipes {
     
     public void Cadastrar(Equipes eqp) throws ClassNotFoundException, SQLException, ParseException {
         Connection conexao = new Conexao().getConnection();
-        PreparedStatement ps = conexao.prepareStatement("insert into equipes (idJogador,nome,num_jogadores, jgsinscritos) values(?,?,?,?)");
+        PreparedStatement ps = conexao.prepareStatement("insert into equipes (idJogador,nome,numJogadores, jgsinscritos) values(?,?,?,?)");
         ps.setInt(1,eqp.getIdJogador());
         ps.setString(2,eqp.getNome());
         ps.setInt(3, eqp.getNumJogadores());
@@ -29,7 +29,7 @@ public class DAO_Equipes {
     
     public void pesquisar(Equipes eqp) throws SQLException, ClassNotFoundException {
         Connection conexao = new Conexao().getConnection();
-        String sql = "SELECT * FROM equipes WHERE id = ?";
+        String sql = "SELECT * FROM equipes WHERE idEqp = ?";
         PreparedStatement st = conexao.prepareStatement(sql);
         st.setInt(1, eqp.getIdEqp());
         ResultSet rs = st.executeQuery();
@@ -42,7 +42,7 @@ public class DAO_Equipes {
     }
     
     public void Alterar(Equipes eqp) throws SQLException, ClassNotFoundException {
-        String sql = "update equipes set idJogador=?, nome=?, num_jogadores=?, jgsinscritos=? where id = ?";
+        String sql = "update equipes set idJogador=?, nome=?, numJogadores=?, jgsinscritos=? where idEqp = ?";
         Connection conexao = null;
         PreparedStatement st = null;      
         try {  
@@ -60,7 +60,7 @@ public class DAO_Equipes {
     }
     
     public void Excluir(Equipes eqp) throws SQLException,ClassNotFoundException{
-        String sql = "delete from equipes where id=?";
+        String sql = "delete from equipes where idEqp=?";
         PreparedStatement st = null;
         Connection con = null;
         con = new Conexao().getConnection();

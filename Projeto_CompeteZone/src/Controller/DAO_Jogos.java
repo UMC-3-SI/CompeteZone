@@ -57,7 +57,7 @@ public class DAO_Jogos {
     }
     
     public void Excluir(Jogos jgs) throws SQLException,ClassNotFoundException{
-        String sql = "delete from jogos where id=?";
+        String sql = "delete from jogos where idJogo=?";
         PreparedStatement st = null;
         Connection con = null;
         con = new Conexao().getConnection();
